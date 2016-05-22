@@ -13,11 +13,15 @@ git add README.md
 
 git commit -m "commit inicial"
 
+Bash: ![Commit inicial](/images/commit_inicial.png)
+
 ## Push inicial ##
 
 Comandos:
 
 git push -u origin master
+
+Bash: ![Push inicial](/images/push_inicial.png)
 
 ## Ignorar archivos ##
 
@@ -32,6 +36,8 @@ git add -A
 git commit -m "ficheros privados"
 
 git push -u origin master
+
+En la carpeta vemos que aparecen los ficheros, aunque Git no los haya subido: ![Ficheros privados](/images/ficheros_privados.png)
 
 ## Crear etiqueta ##
 
@@ -61,7 +67,9 @@ gpg --gen-key
 
 ![Clave pública](/images/Clave_GPG.png "Clave pública")
 
-af37b85510930490a8c25d6243f7af19ebe6aa71
+Configuramos la clave:
+
+![Configuración](/images/GPG.png)
 
 ## Uso social ##
 
