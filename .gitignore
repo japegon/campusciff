@@ -1,0 +1,3 @@
+# Ignorar ficheros privados
+$GIT_DIR/privada
+$GIT_DIR/privado.txt
