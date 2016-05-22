@@ -45,11 +45,11 @@ git push -u origin master
 
 ## Cuenta de GitHub ##
 
-- Poner una foto: </images/Foto.png "Foto de perfil">
+- Poner una foto: (/images/Foto.png "Foto de perfil")
 
-- Doble factor: </images/doble_factor2.png "Doble factor activado">
+- Doble factor: (/images/doble_factor2.png "Doble factor activado")
 
-- Clave pública: </images/Clave_GPG.png "Clave pública">
+- Clave pública: (/images/Clave_GPG.png "Clave pública")
 
 ## Uso social ##
 
