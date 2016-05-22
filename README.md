@@ -45,11 +45,23 @@ git push -u origin master
 
 ## Cuenta de GitHub ##
 
-- Poner una foto: ![Foto de perfil](/images/Foto.png "Foto de perfil")
+- **Poner una foto**: En la página de perfil nos da la posibilidad de cambiar nuestro avatar.
 
-- Doble factor: ![Doble factor activado](/images/doble_factor2.png "Doble factor activado")
+![Foto de perfil](/images/Foto.png "Foto de perfil")
 
-- Clave pública: ![Clave pública](/images/Clave_GPG.png "Clave pública")
+- **Doble factor**: Activamos el doble factor usando SMS.
+
+![Doble factor activado](/images/doble_factor2.png "Doble factor activado")
+
+- **Clave pública**: Creamos una clave pública para nuestro ordenador y la añadimos al perfil de GitHub
+
+Comandos:
+
+gpg --gen-key
+
+![Clave pública](/images/Clave_GPG.png "Clave pública")
+
+af37b85510930490a8c25d6243f7af19ebe6aa71
 
 ## Uso social ##
 
