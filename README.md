@@ -100,9 +100,15 @@ japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git confi
 
 #### Seguir a compañeros de clase ####
 
+![](/images/following.png "Following")
+
 #### Seguir los repositorios campusciff ####
 
+![](/images/watchlist.png "Watch list")
+
 #### Añadir una estrella a los repositorios campusciff ####
+
+![](/images/stars.png "Starred")
 
 ### 1.9. Crear una tabla ###
 
