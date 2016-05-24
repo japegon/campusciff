@@ -150,4 +150,156 @@ To https://github.com/japegon/campusciff.git
 
 ### 2.3. Merge directo ###
 
+**Posicionarse en rama master:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git checkout master
+Switched to branch 'master'
+Su rama está actualizada con «origin/master».
+~~~
+
+**Merge de v0.2 en rama master:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git merge v0.2 -m "Merge con la rama master"
+Updating 67186dc..1c0acc1
+Fast-forward (no commit created; -m option ignored)
+ 2.txt     |  0
+ README.md | 58 ++++++++++++++++++++++++++++++++++++++++++++--------------
+ 2 files changed, 44 insertions(+), 14 deletions(-)
+ create mode 100644 2.txt
+~~~
+
+### 2.4. Merge con conflicto ###
+
+**Poner Hola en el fichero 1.txt:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ echo "Hola" > 1.txt
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git add -Ajapegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "Hola en fichero 1.txt"
+[master e52b063] Hola en fichero 1.txt
+ 1 file changed, 1 insertion(+)
+~~~
+
+**Posicionarse en rama v0.2:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git checkout v0.2
+Switched to branch 'v0.2'
+~~~
+
+**Poner Adios en el fichero 2.txt:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ echo "Adios" > 1.txt
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git add -Ajapegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "Adios en fichero 1.txt"
+[v0.2 4d8bc8c] Adios en fichero 1.txt
+ 1 file changed, 1 insertion(+)
+~~~
+
+**Hacer merge con conflicto:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git checkout master
+Switched to branch 'master'
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git merge v0.2 -m "Merge con conflicto"
+Automezclado 1.txt
+CONFLICTO(contenido): conflicto de fusión en 1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+~~~
+
+### 2.5. Listado de ramas ###
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git branch --merged
+* master
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git branch --no-merged
+  v0.2
+~~~
+
+### 2.6. Arreglar conflicto ###
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ cat 1.txt
+<<<<<<< HEAD
+Hola
+=======
+Adios
+>>>>>>> v0.2
+~~~
+
+Modificamos el fichero 1.txt:
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ cat 1.txt
+Adios
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git add -Ajapegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "Arreglado conflicto"
+[master ca9ebaa] Arreglado conflicto
+~~~
+
+### 2.7. Borrar rama ###
+
+**Crear tag:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git tag v0.2
+~~~
+
+**Borrar rama v0.2:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git branch -d v0.2
+Eliminada la rama v0.2 (era 4d8bc8c)
+~~~
+
+### 2.8. Listado de cambios ###
+
+Lo hacemos a partir de un alias list
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git config --global alias.list 'log --oneline --decorate --graph --all'
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git list*   ca9ebaa (HEAD -> master, tag: v0.2) Arreglado conflicto
+|\  
+| * 4d8bc8c Adios en fichero 1.txt
+* | e52b063 Hola en fichero 1.txt
+|/  
+* 1c0acc1 (origin/v0.2) fichero 2
+* 69c4a27 fichero 2
+* 556743a fichero 2
+* 67186dc (origin/master) readme
+* f4730f0 readme
+* e256ec2 images
+* 63e7078 images
+* 1ed79f0 images
+* cc3ff2b images
+* 01f201e images
+* 9acd3b6 prueba final
+* 1fc6aa6 etiqueta
+* d995a65 (tag: v0.1) ficheros privados
+* 766a115 ficheros privados
+* 968b135 ficheros privados
+* 66ca4ed ficheros privados
+* 26a0b53 commit inicial
+~~~
+
+### 2.9. Crear una organización ###
+
+![](/images/organizacion.png "Organización")
+
+### 2.10. Crear equipos ###
+
+Grupo administradores:
+
+![](/images/grupo_administradores.png "Administradores")
+
+Grupo colaboradores:
+
+![](/images/grupo_colaboradores.png "Colaboradores")
+
+Permisos grupos:
+
+![](/images/permisos_grupos.png "Colaboradores")
+
+**Meter compañeros en los equipos:**
+
 
