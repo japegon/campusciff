@@ -9,18 +9,14 @@
 ### 1.2. Clonar repositorio ###
 
 ~~~
-
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git clone https://github.com/japegon/campusciff.git
-
 ~~~
 
 ### 1.3. Commit inicial ###
 
 ~~~
-
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git add README.md
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "commit inicial"
-
 ~~~
 
 ![](/images/commit_inicial.png)
@@ -28,9 +24,7 @@ japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commi
 ### 1.4. Push inicial ###
 
 ~~~
-
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push -u origin master
-
 ~~~
 
 ![](/images/push_inicial.png)
@@ -38,14 +32,12 @@ japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push 
 ### 1.5. Ignorar archivos ###
 
 ~~~
-
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ cat .gitignore 
 $GIT_DIR/privada/
 /privado.txt
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git add -A
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "ficheros privados"
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push -u origin master
-
 ~~~
 
 En la carpeta vemos que aparecen los ficheros, aunque Git no los haya subido: 
@@ -55,11 +47,9 @@ En la carpeta vemos que aparecen los ficheros, aunque Git no los haya subido:
 ### 1.6. Crear etiqueta ###
 
 ~~~
-
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git tag v0.1
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "etiqueta"
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push -u origin master
-
 ~~~
 
 ### 1.7. Cuenta de GitHub ###
@@ -81,9 +71,7 @@ Activamos el doble factor usando SMS.
 Creamos una clave pública para nuestro ordenador y la añadimos al perfil de GitHub
 
 ~~~
-
 japegon@japegon-W230ST:~/Descargas/gnupg-2.0.30$ gpg --gen-key
-
 ~~~
 
 ![](/images/Clave_GPG.png "Clave pública")
@@ -91,9 +79,7 @@ japegon@japegon-W230ST:~/Descargas/gnupg-2.0.30$ gpg --gen-key
 Configuramos la clave:
 
 ~~~
-
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git config --global user.signingkey CD4E172A
-
 ~~~
 
 ### 1.8. Uso social ###
@@ -121,3 +107,28 @@ japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git confi
 ### 1.10. Colaboradores ###
 
 ![](/images/Colaborador.png "Colaborador")
+
+## 2. Utilización avanzada de Git, GitHub y Markdown ##
+
+### 2.1. Crear una rama ###
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git checkout -b v0.2
+~~~
+
+### 2.2. Añadir fichero 2.txt ###
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ touch 2.txt
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git add -A
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "fichero 2"
+[v0.2 556743a] fichero 2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.txt
+~~~
+
+Subir los cambios:
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push origin v0.2
+~~~
