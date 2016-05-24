@@ -116,6 +116,14 @@ japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git confi
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git checkout -b v0.2
 ~~~
 
+**Ramas:**
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git branch -v
+  master 67186dc readme
+* v0.2   69c4a27 fichero 2
+~~~
+
 ### 2.2. Añadir fichero 2.txt ###
 
 ~~~
@@ -127,8 +135,19 @@ japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commi
  create mode 100644 2.txt
 ~~~
 
-Subir los cambios:
+**Subir los cambios:**
 
 ~~~
 japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push origin v0.2
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 785 bytes | 0 bytes/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+To https://github.com/japegon/campusciff.git
+ * [new branch]      v0.2 -> v0.2
 ~~~
+
+### 2.3. Merge directo ###
+
+
