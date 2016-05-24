@@ -1,79 +1,117 @@
-# Utilización básica de Git, GitHub y Markdown #
-## Clonar repositorio ##
+# EJERCICIOS GIT, GITHUB Y MARKDOWN #
 
-Comandos:
+## 1. Utilización básica de Git, GitHub y Markdown ##
 
-git clone https://github.com/japegon/campusciff.git
+### 1.1. Crear repositorio ###
 
-## Commit inicial ##
+![](/images/new_repository.png)
 
-Comandos:
+### 1.2. Clonar repositorio ###
 
-git add README.md
+~~~
 
-git commit -m "commit inicial"
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git clone https://github.com/japegon/campusciff.git
 
-Bash: ![Commit inicial](/images/commit_inicial.png)
+~~~
 
-## Push inicial ##
+### 1.3. Commit inicial ###
 
-Comandos:
+~~~
 
-git push -u origin master
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git add README.md
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "commit inicial"
 
-Bash: ![Push inicial](/images/push_inicial.png)
+~~~
 
-## Ignorar archivos ##
+![](/images/commit_inicial.png)
 
-Comandos:
+### 1.4. Push inicial ###
 
-gedit .gitignore
-	$GIT_DIR/privada
-	/privado.txt
+~~~
 
-git add -A
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push -u origin master
 
-git commit -m "ficheros privados"
+~~~
 
-git push -u origin master
+![](/images/push_inicial.png)
 
-En la carpeta vemos que aparecen los ficheros, aunque Git no los haya subido: ![Ficheros privados](/images/ficheros_privados.png)
+### 1.5. Ignorar archivos ###
 
-## Crear etiqueta ##
+~~~
 
-Comandos:
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ cat .gitignore 
+$GIT_DIR/privada/
+/privado.txt
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git add -A
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "ficheros privados"
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push -u origin master
 
-git tag v0.1
+~~~
 
-git commit -m "etiqueta"
+En la carpeta vemos que aparecen los ficheros, aunque Git no los haya subido: 
 
-git push -u origin master
+![](/images/ficheros_privados.png)
 
-## Cuenta de GitHub ##
+### 1.6. Crear etiqueta ###
 
-- **Poner una foto**: En la página de perfil nos da la posibilidad de cambiar nuestro avatar.
+~~~
 
-![Foto de perfil](/images/Foto.png "Foto de perfil")
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git tag v0.1
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git commit -m "etiqueta"
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git push -u origin master
 
-- **Doble factor**: Activamos el doble factor usando SMS.
+~~~
 
-![Doble factor activado](/images/doble_factor2.png "Doble factor activado")
+### 1.7. Cuenta de GitHub ###
 
-- **Clave pública**: Creamos una clave pública para nuestro ordenador y la añadimos al perfil de GitHub
+#### Poner una foto ####
 
-Comandos:
+En la página de perfil nos da la posibilidad de cambiar nuestro avatar.
 
-gpg --gen-key
+![](/images/Foto.png "Foto de perfil")
 
-![Clave pública](/images/Clave_GPG.png "Clave pública")
+#### Doble factor ####
+
+Activamos el doble factor usando SMS.
+
+![](/images/doble_factor2.png "Doble factor activado")
+
+#### Clave pública ####
+
+Creamos una clave pública para nuestro ordenador y la añadimos al perfil de GitHub
+
+~~~
+
+japegon@japegon-W230ST:~/Descargas/gnupg-2.0.30$ gpg --gen-key
+
+~~~
+
+![](/images/Clave_GPG.png "Clave pública")
 
 Configuramos la clave:
 
-![Configuración](/images/GPG.png)
+~~~
 
-## Uso social ##
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git config --global user.signingkey CD4E172A
+
+~~~
+
+### 1.8. Uso social ###
+
+#### Seguir a compañeros de clase ####
+
+#### Seguir los repositorios campusciff ####
+
+#### Añadir una estrella a los repositorios campusciff ####
+
+### 1.9. Crear una tabla ###
 
 |NOMBRE|GITHUB|
 |------|-----:|
-|Nombre del compañero 1|enlace|
-|Nombre del compañero 2|enlace|
+|Jorge Maza|<https://github.com/jorgemaza/campusciff>|
+|Juan Isidro|<https://github.com/JuanRodriguez16/campusciff>|
+|Araceli Macia|<https://github.com/araceliMacia/campusciff>|
+
+### 1.10. Colaboradores ###
+
+![](/images/Colaborador.png "Colaborador")
