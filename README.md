@@ -302,4 +302,13 @@ Permisos grupos:
 
 **Meter compañeros en los equipos:**
 
+![](/images/administradores.png "Administradores")
+
+![](/images/colaboradores.png "Colaboradores")
+
+### 2.11. Crear index.html ###
+
+Renombramos el repositorio de la organización:
+
+![](/images/rename.png "Renombrar repositorio")
 
