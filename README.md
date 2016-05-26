@@ -312,3 +312,90 @@ Renombramos el repositorio de la organización:
 
 ![](/images/rename.png "Renombrar repositorio")
 
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git clone https://github.com/campusciff-japegon/campusciff-japegon.github.io.git
+Clonar en «campusciff-japegon.github.io»...
+warning: Parece que ha clonado un repositorio vacío.
+Checking connectivity... hecho.
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ cd campusciff-japegon.github.io
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/campusciff-japegon.github.io$ echo "Organización de José Luis González Blázquez" > index.html
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/campusciff-japegon.github.io$ git add index.html
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/campusciff-japegon.github.io$ git commit -m "Página index principal"
+[master (root-commit) 57d6be8] Página index principal
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/campusciff-japegon.github.io$ git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 271 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/campusciff-japegon/campusciff-japegon.github.io.git
+ * [new branch]      master -> master
+~~~
+
+![](/images/index.png "Website")
+
+### 2.12. Crear pull-requests ###
+
+#### 2.12.1. Hacer 2 forks de 2 organizaciones ####
+
+![](/images/fork_repositories.png "Forks")
+
+#### 2.12.2. Crear una rama en cada fork ####
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git clone https://github.com/campusciff-japegon/annalawrenc.github.io.git
+Clonar en «annalawrenc.github.io»...
+remote: Counting objects: 52, done.
+remote: Compressing objects: 100% (42/42), done.
+remote: Total 52 (delta 7), reused 51 (delta 6), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+Checking connectivity... hecho.
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ cd annalawrenc.github.io/
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/annalawrenc.github.io$ git branch rama-joseluis
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/annalawrenc.github.io$ git checkout rama-joseluis
+Switched to branch 'rama-joseluis'
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/annalawrenc.github.io$ git commit -m "nueva rama"
+En la rama rama-joseluis
+nothing to commit, working directory clean
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/annalawrenc.github.io$ git push origin rama-joseluis
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/campusciff-japegon/annalawrenc.github.io.git
+ * [new branch]      rama-joseluis -> rama-joseluis
+~~~
+
+![](/images/pull1.png "Crear rama 1")
+
+~~~
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ git clone https://github.com/campusciff-japegon/campusciff-jorgemaza.github.io
+Clonar en «campusciff-jorgemaza.github.io»...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 1), reused 5 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+Checking connectivity... hecho.
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff$ cd campusciff-jorgemaza.github.io/
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/campusciff-jorgemaza.github.i
+o$ git checkout -b rama-joseluis
+Switched to a new branch 'rama-joseluis'
+japegon@japegon-W230ST:/media/japegon/Datos/Máster/github/campusciff/campusciff-jorgemaza.github.i
+o$ git push origin rama-joseluis
+Username for 'https://github.com': japegon
+Password for 'https://japegon@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/campusciff-japegon/campusciff-jorgemaza.github.io
+ * [new branch]      rama-joseluis -> rama-joseluis
+~~~
+
+![](/images/pull2.png "Crear rama 2")
+
+#### 2.12.3. Modificar el fichero index ####
+
+![](/images/edit_index2.png "Editar index 1")
+
+![](/images/edit_index1.png "Editar index 2")
+
+#### 2.12.4. Hacer pull-request con cada rama ####
+
+![](/images/pull_request1.png "Pull request 1")
+
+![](/images/pull_request2.png "Pull request 2")
